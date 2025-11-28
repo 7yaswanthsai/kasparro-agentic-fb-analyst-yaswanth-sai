@@ -1,0 +1,15 @@
+python: "3.10"
+random_seed: 42
+confidence_min: 0.6
+
+use_sample_data: true
+data_csv: "data/sample_fb_ads.csv"
+
+output_dir: "reports"
+logs_dir: "logs"
+
+report_file: "reports/report.md"
+insights_file: "reports/insights.json"
+creatives_file: "reports/creatives.json"
+
+sample_window_days: 30

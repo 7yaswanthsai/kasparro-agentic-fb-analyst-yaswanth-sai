@@ -1,0 +1,147 @@
+{
+  "query": "Analyze ROAS drop",
+  "plan": {
+    "query": "Analyze ROAS drop",
+    "tasks": [
+      {
+        "task": "load_data",
+        "description": "Load and summarize dataset"
+      },
+      {
+        "task": "generate_insights",
+        "description": "Create hypotheses explaining metric changes"
+      },
+      {
+        "task": "validate_insights",
+        "description": "Evaluate hypotheses using quantitative checks"
+      },
+      {
+        "task": "generate_creatives",
+        "description": "Suggest new creative directions for low-CTR campaigns"
+      },
+      {
+        "task": "compile_report",
+        "description": "Write final marketing insights report"
+      }
+    ]
+  },
+  "summary": {
+    "timeseries": [
+      {
+        "date": "2025-01-01T00:00:00",
+        "spend": 420,
+        "impressions": 30000,
+        "clicks": 380,
+        "purchases": 8,
+        "revenue": 1000,
+        "ctr": 0.012666666666666666,
+        "roas": 2.380952380952381
+      },
+      {
+        "date": "2025-01-02T00:00:00",
+        "spend": 500,
+        "impressions": 34000,
+        "clicks": 365,
+        "purchases": 6,
+        "revenue": 900,
+        "ctr": 0.010735294117647058,
+        "roas": 1.8
+      },
+      {
+        "date": "2025-01-03T00:00:00",
+        "spend": 600,
+        "impressions": 40000,
+        "clicks": 310,
+        "purchases": 3,
+        "revenue": 540,
+        "ctr": 0.00775,
+        "roas": 0.9
+      }
+    ],
+    "campaign_summary": [
+      {
+        "campaign_name": "ComfortFit_C1",
+        "spend": 470,
+        "impressions": 36000,
+        "clicks": 335,
+        "purchases": 6,
+        "revenue": 670,
+        "ctr": 0.009305555555555555,
+        "roas": 1.425531914893617
+      },
+      {
+        "campaign_name": "PremiumWear_C2",
+        "spend": 1050,
+        "impressions": 68000,
+        "clicks": 720,
+        "purchases": 11,
+        "revenue": 1770,
+        "ctr": 0.010588235294117647,
+        "roas": 1.6857142857142857
+      }
+    ],
+    "columns": [
+      "campaign_name",
+      "adset_name",
+      "date",
+      "spend",
+      "impressions",
+      "clicks",
+      "ctr",
+      "purchases",
+      "revenue",
+      "roas",
+      "creative_type",
+      "creative_message",
+      "audience_type",
+      "platform",
+      "country"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "roas_spend_negative",
+      "hypothesis": "Increasing spend correlates with decreasing ROAS",
+      "metric": "roas_vs_spend",
+      "value": -0.9982194894657825,
+      "evidence": {
+        "correlation": -0.9982194894657825
+      }
+    },
+    {
+      "id": "fatigue_ComfortFit_C1",
+      "hypothesis": "High frequency + low CTR indicates audience fatigue",
+      "campaign": "ComfortFit_C1",
+      "metric": "frequency",
+      "evidence": {
+        "campaign": "ComfortFit_C1",
+        "frequency": 12.0,
+        "ctr": 0.009305555555555555
+      }
+    }
+  ],
+  "validated": [
+    {
+      "id": "roas_spend_negative",
+      "hypothesis": "Increasing spend correlates with decreasing ROAS",
+      "campaign": null,
+      "confidence": 0.75,
+      "valid": true,
+      "raw_evidence": {
+        "correlation": -0.9982194894657825
+      }
+    },
+    {
+      "id": "fatigue_ComfortFit_C1",
+      "hypothesis": "High frequency + low CTR indicates audience fatigue",
+      "campaign": "ComfortFit_C1",
+      "confidence": 0.8,
+      "valid": true,
+      "raw_evidence": {
+        "campaign": "ComfortFit_C1",
+        "frequency": 12.0,
+        "ctr": 0.009305555555555555
+      }
+    }
+  ]
+}
