@@ -46,7 +46,8 @@ kasparro-agentic-fb-analyst-yaswanth-sai/
 │   └── config.yaml
 ├── data/
 │   ├── sample_fb_ads.csv
-│   └── README.md (optional notes)
+│   ├── synthetic_fb_ads_undergarments.csv
+│   └── README.md
 ├── prompts/
 │   ├── planner_prompt.md
 │   ├── insight_prompt.md
@@ -81,14 +82,19 @@ Edit `config/config.yaml`:
 python: "3.10"
 random_seed: 42
 confidence_min: 0.6
-use_sample_data: true
-data_csv: "data/sample_fb_ads.csv"
+
+use_sample_data: false
+data_csv: "data/synthetic_fb_ads_undergarments.csv"
+
 output_dir: "reports"
 logs_dir: "logs"
+
 report_file: "reports/report.md"
 insights_file: "reports/insights.json"
 creatives_file: "reports/creatives.json"
+
 sample_window_days: 30
+
 ```
 
 ---
@@ -211,10 +217,10 @@ Includes:
 
 # 🔐 Reproducibility
 
-- Deterministic random seed (`seed=42`)
+- Fixed random seed (`random_seed=42`)
 - Pinned library versions
-- Configurable sample/full dataset switch (`use_sample_data`)
-- Clear I/O paths
+- Configurable sample/full dataset mode
+- Deterministic pipeline
 
 ---
 
