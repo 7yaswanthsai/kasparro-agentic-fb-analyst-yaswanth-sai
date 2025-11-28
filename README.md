@@ -56,7 +56,7 @@ logs/log_<timestamp>.json
 ```
 kasparro-agentic-fb-analyst-yaswanth-sai/
 ├── agent_graph.md
-├── MAKEFILE
+├── Makefile
 ├── README.md
 ├── requirements.txt
 ├── config/
