@@ -5,6 +5,21 @@ This project implements a multi-agent, reasoning-driven system that autonomously
 
 The architecture follows the required Planner → Data Agent → Insight Agent → Evaluator Agent → Creative Generator flow.
 
+## Table of Contents
+- [Quick Start](#-quick-start)
+- [Project Structure](#project-structure)
+- [Configuration](#-configuration)
+- [Agent Architecture](#-agent-architecture)
+- [Example CLI Usage](#-example-cli-command)
+- [Example Outputs](#-example-output-files)
+- [Tests](#-tests)
+- [Observability](#-observability)
+- [Reproducibility](#-reproducibility)
+- [Release Instructions](#-release-instructions)
+- [Submission](#-submission)
+- [License](#license)
+
+
 ---
 
 # 🚀 Quick Start
