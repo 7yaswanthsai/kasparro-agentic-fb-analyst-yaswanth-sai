@@ -96,7 +96,7 @@ def main(user_query, config_path="config/config.yaml"):
     )
 
     # Write markdown report
-    with open(report_path, "w") as f:
+    with open(report_path, "w", encoding="utf-8") as f:
         f.write(f"# Facebook Ads Performance Analysis\n")
         f.write(f"Query: **{user_query}**\n\n")
 
