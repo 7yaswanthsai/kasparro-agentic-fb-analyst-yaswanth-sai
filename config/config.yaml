@@ -13,3 +13,4 @@ insights_file: "reports/insights.json"
 creatives_file: "reports/creatives.json"
 
 sample_window_days: 30
+schema_drift_mode: "fail"

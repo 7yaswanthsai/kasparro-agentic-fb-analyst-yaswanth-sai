@@ -55,6 +55,8 @@ logs/log_<timestamp>.json
 
 ```
 kasparro-agentic-fb-analyst-yaswanth-sai/
+├── agent_graph.md
+├── Makefile
 ├── README.md
 ├── requirements.txt
 ├── config/
@@ -84,7 +86,12 @@ kasparro-agentic-fb-analyst-yaswanth-sai/
 ├── logs/
 │   └── [...]
 └── tests/
-    └── test_evaluator.py
+    ├── test_data_agent.py
+    ├── test_evaluator.py
+    ├── test_pipeline.py
+    ├── test_integration.py
+    ├── test_metrics_layer.py
+    └── test_schema_drift.py
 ```
 
 ---
@@ -108,6 +115,7 @@ report_file: "reports/report.md"
 insights_file: "reports/insights.json"
 creatives_file: "reports/creatives.json"
 
+schema_drift_mode: "warn"  # fail | warn | off
 sample_window_days: 30
 
 ```
@@ -210,7 +218,7 @@ pytest -q
 
 Expected:
 ```
-1 passed
+10 passed
 ```
 
 ---
@@ -265,4 +273,3 @@ Submit:
 - Commit hash  
 - Tag name `v1.0`  
 - CLI command used to generate outputs  
-
